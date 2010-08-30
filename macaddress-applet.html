@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--
+ * This software is released under the New BSD License.
+ * 
+ * @author: Adam Kubica <caffecoder@gmail.com>
+-->
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Example of macaddress-applet.</title>
+        <script type="text/javascript" src="macaddress-applet.js"></script>
+    </head>
+    <body>
+        <!--[if !IE]> Firefox and others will use outer object -->
+    <embed type="application/x-java-applet"
+           name="macaddress_applet"
+           width="0"
+           height="0"
+           code="MacAddressApplet"
+           archive="macaddress-applet.jar"
+           pluginspage="http://java.sun.com/javase/downloads/index.jsp"
+           style="position:absolute; top:-1000px; left:-1000px;">
+        <noembed>
+            <!--<![endif]-->
+            <!---->
+            <object classid="clsid:CAFEEFAC-0016-0000-FFFF-ABCDEFFEDCBA"
+                    type="application/x-java-applet"
+                    name="macaddress_applet"
+                    style="position:absolute; top:-1000px; left:-1000px;">
+                <param name="code" value="MacAddressApplet">
+                <param name="archive" value="macaddress-applet.jar" >
+                <param name="mayscript" value="true">
+                <param name="scriptable" value="true">
+                <param name="width" value="0">
+                <param name="height" value="0">
+            </object>
+            <!--[if !IE]> Firefox and others will use outer object -->
+        </noembed>
+    </embed>
+    <!--<![endif]-->
+
+    <script type="text/javascript">
+        show_macaddresses();
+    </script>
+</body>
+</html>
