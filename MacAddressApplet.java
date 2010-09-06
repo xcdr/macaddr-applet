@@ -8,7 +8,10 @@ import java.applet.Applet;
  * A class for MAC address detection.
  *
  * This software is released under the New BSD License.
- * 
+ *
+ * Part of this code is based on macaddressapplet-1.0.tar.gz by Tim Desjardins.
+ * Original license was "Feel free to use or abuse this code anyway you wish, without warranty of course".
+ *
  * @author: Adam Kubica <caffecoder@gmail.com>
  */
 public class MacAddressApplet extends Applet {
