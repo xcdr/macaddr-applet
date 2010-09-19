@@ -1,0 +1,25 @@
+
+<project>
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build"/>
+        <javac srcdir="." destdir="build"/>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build"/>
+        <jar destfile="build/macaddress-applet.jar" basedir="build">
+            <manifest>
+                <attribute name="Main-Class" value="MacAddressApplet"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run">
+        <java jar="build/macaddress-applet.jar" fork="true"/>
+    </target>
+</project>
+
