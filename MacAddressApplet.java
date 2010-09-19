@@ -1,3 +1,4 @@
+
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Enumeration;
@@ -32,26 +33,6 @@ public class MacAddressApplet extends Applet {
         return "";
     }
 
-    public static String getInterfacesJSON() {
-        try {
-            String macs[] = getInterfaces();
-
-            String sep = "";
-            StringBuilder macArray = new StringBuilder("['");
-            for (String mac : macs) {
-                macArray.append(sep).append(mac);
-                sep = "','";
-            }
-            macArray.append("']");
-
-            return macArray.toString();
-        } catch (Exception ex) {
-            System.err.println("Exception:: " + ex.getMessage());
-        }
-
-        return "[]";
-    }
-
     public static String[] getInterfaces() {
         try {
             Enumeration<NetworkInterface> nis = NetworkInterface.getNetworkInterfaces();
@@ -66,13 +47,33 @@ public class MacAddressApplet extends Applet {
                 }
             }
             return result.toArray(new String[0]);
-        } catch (SocketException ex) {
-            System.err.println("SocketException:: " + ex.getMessage());
-        } catch (Exception ex) {
-            System.err.println("Exception:: " + ex.getMessage());
+        } catch (SocketException e) {
+            System.err.println("SocketException:: " + e.getMessage());
+        } catch (Exception e) {
+            System.err.println("Exception:: " + e.getMessage());
         }
 
         return new String[0];
+    }
+
+    public static String getInterfacesJSON() {
+        try {
+            String macs[] = getInterfaces();
+
+            String sep = "";
+            StringBuilder macArray = new StringBuilder("['");
+            for (String mac : macs) {
+                macArray.append(sep).append(mac);
+                sep = "','";
+            }
+            macArray.append("']");
+
+            return macArray.toString();
+        } catch (Exception e) {
+            System.err.println("Exception:: " + e.getMessage());
+        }
+
+        return "[]";
     }
 
     public static void main(String... args) {
