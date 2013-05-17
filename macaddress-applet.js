@@ -1,7 +1,7 @@
 /**
- * This software is released under the New BSD License.
+ * This software is released under the MIT License.
  *
- * @author: Adam Kubica <caffecoder@gmail.com>
+ * @author: Adam Kubica <caffecoder@kaizen-step.com>
  */
 function show_macaddresses(){
     if ( typeof(document.macaddress_applet.isActive) == "undefined" )
