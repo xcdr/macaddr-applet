@@ -14,5 +14,5 @@ Original license was "Feel free to use or abuse this code anyway you wish, witho
 
 This project was previous hosted at Google Project Hosting and already is dead.
 
-Downloads are available [here](http://code.google.com/p/macaddr-applet/downloads/list).
+Downloads are available [here](http://download.kaizen-step.com/?dir=macaddr-applet).
 
